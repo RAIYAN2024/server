@@ -1,14 +1,15 @@
 import { build } from "esbuild";
 import { nodeExternalsPlugin } from "esbuild-node-externals";
+import path from "path";
 build({
   entryPoints: ["src/app.ts"],
   bundle: true,
   platform: "node",
   target: ["node20"],
-  outdir: "dist/app.js",
+  outfile: "dist/app.js",
   format: "esm",
   alias: {
-    "@": "./src",
+    "@": path.resolve("./src"),
   },
   sourcemap: true,
   plugins: [nodeExternalsPlugin()],
