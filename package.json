@@ -7,7 +7,7 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "build": "build.js",
+    "build": "build.mjs",
     "start": "node dist/app.js"
   },
   "dependencies": {
